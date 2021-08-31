@@ -2,5 +2,11 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import registerBaseComponents from "./helpers/registerBaseComponents";
 
-createApp(App).use(store).use(router).mount("#app");
+export const app = createApp(App);
+
+// Register base components
+registerBaseComponents(app);
+
+app.use(store).use(router).mount("#app");
