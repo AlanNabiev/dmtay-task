@@ -1,4 +1,4 @@
-# cryptocastle
+# dmtay-task
 
 ## Project setup
 ```
