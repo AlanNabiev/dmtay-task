@@ -1,3 +1,3 @@
 <template>
-  <div class="result"></div>
+    <h1>result</h1>
 </template>

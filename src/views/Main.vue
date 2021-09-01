@@ -1,4 +1,11 @@
 <template>
-  <div class="Main">
-  </div>
+ <h>Main</h>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Main"
+});
+</script>

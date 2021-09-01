@@ -1,7 +1,11 @@
-<template>Started!</template>
+<template>
+  <h1 class="text-red-500">Welcome</h1>
+</template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "Welcome"
-};
+});
 </script>
