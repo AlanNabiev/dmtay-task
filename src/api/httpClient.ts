@@ -1,10 +1,10 @@
   
 import axios from 'axios'
 
-// const baseURL = ''
+ const baseURL = 'https://opentdb.com'
 
 const httpClient = axios.create({
-  // baseURL,
+  baseURL,
   headers: {
     'Content-Type': 'application/json'
   }
