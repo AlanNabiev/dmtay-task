@@ -19,7 +19,7 @@
     <span class="text-xl text-green-600 text-center"
       >You answered all the questions</span
     >
-    <BaseButton @click="checkAnswers" color="green" to="result"
+    <BaseButton @click="checkAnswers" color="green" to="result" 
       >See results</BaseButton
     >
   </div>

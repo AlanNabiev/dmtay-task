@@ -2,7 +2,9 @@
   <div class="mt-20 space-y-4">
     <span class="mt-10 text-xl text-green-700 font-bold">{{ question }}</span>
     <BaseRadioGroup @selectAnswer="selectedAnswer" :options="answers" />
-    <BaseButton @click="sendAnswer" color="green">Select</BaseButton>
+    <BaseButton @click="sendAnswer" color="green" :disabled="!answer"
+      >Select</BaseButton
+    >
   </div>
 </template>
 
@@ -26,6 +28,7 @@ export default defineComponent({
 
     function sendAnswer() {
       emit("sendAnswerEvent");
+      answer.value = null;
     }
 
     watchEffect(() => {

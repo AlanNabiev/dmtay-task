@@ -55,7 +55,8 @@ export default defineComponent({
           "gray",
           "red",
           "white",
-          "blue"
+          "blue",
+          "green"
         ].includes(val)
     },
     to: { type: String, default: "" },

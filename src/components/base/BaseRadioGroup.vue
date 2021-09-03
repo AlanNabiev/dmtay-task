@@ -74,9 +74,10 @@
 </template>
 
 <script>
-import { ref, watch } from "vue";
+import { ref, watchEffect } from "vue";
 import {
   RadioGroup,
+  RadioGroupLabel,
   RadioGroupDescription,
   RadioGroupOption
 } from "@headlessui/vue";
@@ -84,6 +85,7 @@ import {
 export default {
   components: {
     RadioGroup,
+    RadioGroupLabel,
     RadioGroupDescription,
     RadioGroupOption
   },
@@ -92,9 +94,9 @@ export default {
     options: Array
   },
 
-  setup(props, { emit }) {
-    const selected = ref(props.options[0]);
-    watch(() => {
+  setup(_, { emit }) {
+    const selected = ref(null);
+    watchEffect(() => {
       emit("selectAnswer", selected.value);
     });
 
