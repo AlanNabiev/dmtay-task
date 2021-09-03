@@ -94,7 +94,6 @@ export default {
 
   setup(props, { emit }) {
     const selected = ref(props.options[0]);
-
     watch(() => {
       emit("selectAnswer", selected.value);
     });

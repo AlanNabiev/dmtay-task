@@ -6,3 +6,9 @@ export interface questionsApi {
   correct_answer: String,
   incorrect_answers: Array<String>
 }
+
+export interface answersInfo {
+  answer: String,
+  question: String,
+  accuracy: Boolean
+}
