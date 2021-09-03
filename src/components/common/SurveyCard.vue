@@ -2,7 +2,7 @@
   <div class="mt-20 space-y-4">
     <span class="mt-10 text-xl text-green-700 font-bold">{{ question }}</span>
     <BaseRadioGroup @selectAnswer="selectedAnswer" :options="answers" />
-    <BaseButton @click="sendAnswer" color="green" :disabled="!answer"
+    <BaseButton @click.stop="sendAnswer" color="green" :disabled="!answer"
       >Select</BaseButton
     >
   </div>
@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watchEffect } from "vue";
+import { postAnswer } from "@/api/postAnswer.api";
 
 export default defineComponent({
   name: "SurveyCard",
@@ -28,6 +29,7 @@ export default defineComponent({
 
     function sendAnswer() {
       emit("sendAnswerEvent");
+      postAnswer(answer.value);
       answer.value = null;
     }
 
