@@ -15,8 +15,9 @@
     v-if="!questions.length"
     class="fixed inset-0 flex flex-col justify-around items-center bg-gray-300"
   >
-    <span class="text-2xl text-green-700 text-center"
-      >Congratulations, you answered all the questions</span
+    <span class="text-3xl font-bold text-green-700">Congratulations!</span>
+    <span class="text-xl text-green-600 text-center"
+      >You answered all the questions</span
     >
     <BaseButton @click="checkAnswers" color="green" to="result"
       >See results</BaseButton
